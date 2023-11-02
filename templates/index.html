@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'ind_style.css' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-[url({% static 'pexels-johannes-plenio-1118873.jpg' %})] bg-cover">
+
+    <nav style="z-index: 5;"
+        class="bg-[#2107173f] backdrop-blur-sm sticky top-0 px-4 flex items-center justify-between">
+        <div class="flex px-4 py-3 h-20">
+            <img class="rounded-full border-2 border-red-400" src="{% static 'img2.png' %}" alt="logo">
+            <h1 class="flex space-x-24 px-2 py-3 text-purple-200 text-3xl">Weather Info</h1>
+        </div>
+        <ul class="flex space-x-10 px-2 pt-5 text-purple-200 text-2xl">
+            <li class="cursor-pointer hover:border-b-2 px-4 py-3 rounded-sm bg-slate-500"><a href="admin_home">Home</a>
+            </li>
+            <li class="cursor-pointer hover:border-b-2 px-4 py-3 rounded-sm hover:bg-slate-500"><a
+                    href="about">About</a></li>
+            <li class="cursor-pointer hover:border-b-2 px-4 py-3 rounded-sm hover:bg-slate-500">Contact us</li>
+            <button class="btnlogin">Login</button>
+        </ul>
+    </nav>
+    <!-- <header class="bg-[#2107173f] backdrop-blur-sm sticky top-0 px-4 flex items-center justify-between">
+        <h2 class="logo">Logo</h2>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <a href="#">contact</a>
+            <button class="btnlogin">Login</button>
+        </nav>
+    </header> -->
+
+    <div class="text-box">
+        {% for i in landingPageDivs %}
+        {% if forloop.counter0|divisibleby:2 %}
+        <div class="rounded-md drop-shadow-sm backdrop-blur-md bg-[#ddf1d190] flex mx-32 my-40 items-center">
+            <img class="rounded-md px-2 py-2" src="{% static 'img2.png' %}" alt="logo">
+            <div class="flex flex-col mx-6 my-8 px-11 py-4">
+                <h1 style="font-family: 'Dancing Script', cursive;"
+                    class="flex space-x-24 px-2 py-3 text-purple-200 text-3xl">Lorem ipsum dolor</h1>
+                <h5 style="font-family: 'Dancing Script', cursive;">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Dolores odio commodi dolore quisquam perspiciatis mollitia voluptatibus saepe sequi beatae nostrum
+                    quidem accusamus, tempore nesciunt. Non ad eos nam labore sequi.
+                </h5>
+            </div>
+        </div>
+        {% else %}
+        <div
+            class="rounded-md drop-shadow-sm backdrop-blur-md bg-[#ddf1d190] flex mx-32 my-40 items-center flex-row-reverse">
+            <img class="rounded-md px-2 py-2" src="{% static 'img2.png' %}" alt="logo">
+            <div class="flex flex-col mx-6 my-8 px-11 py-4">
+                <h1 style="font-family: 'Dancing Script', cursive;"
+                    class="flex space-x-24 px-2 py-3 text-purple-200 text-3xl">Lorem ipsum dolor</h1>
+                <h5 style="font-family: 'Dancing Script', cursive;">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
+                    Dolores odio commodi dolore quisquam perspiciatis mollitia voluptatibus saepe sequi beatae nostrum
+                    quidem accusamus, tempore nesciunt. Non ad eos nam labore sequi.
+                </h5>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    <!-- login & registaration page -->
+    <!-- <div class="flex justify-center items-center truncate backdrop-blur-sm"> -->
+    <div class="wrapper ">
+
+        
+        <div class="w-11 h-10 flex p-2 top-2 right-0 cursor-pointer hover:drop-shadow-md absolute z-10 icon-close">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                {% csrf_token %}
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <lable>Email</lable>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input name="email" type="email">
+
+                </div>
+
+
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <lable>password</lable>
+                    <i class="fa-solid fa-lock"></i>
+                    <input name="password" type="password">
+
+                </div>
+
+                <div class="remember-forgot">
+                    <lable>
+                        <input type="checkbox">
+                        Remember me
+                    </lable>
+                    <a href="#">Forgot password</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+
+            </form>
+        </div>
+
+
+
+
+        <div class="form-box register">
+            <h2>Registration</h2>
+            <form action="#">
+
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <lable>Username</lable>
+                    <i class="fa-solid fa-user"></i>
+                    <input type="email">
+
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <lable>Email</lable>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email">
+
+                </div>
+
+
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <lable>password</lable>
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password">
+
+                </div>
+
+                <div class="remember-forgot">
+                    <lable>
+                        <input type="checkbox">
+                        I agree to the terms and conditions
+                    </lable>
+
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+
+            </form>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="{% static 'script.js' %}"></script>
+    <!-- <script src="{% static 'script.js' %}"></script> -->
+</body>
+
+</html>

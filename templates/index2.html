@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link href="{% static 'index_style.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-[url({% static 'back.jpg' %})]">
+    <nav class="bg-[#2107173f] backdrop-blur-sm sticky top-0 px-4 flex items-center justify-between">
+        <div class="flex px-4 py-3 h-20">
+            <img class="rounded-full border-2 border-red-400" src="{% static 'img2.png' %}" alt="logo">
+        </div>
+        <ul style="font-family: 'Dancing Script', cursive;" class="flex space-x-24 px-2 py-3 text-purple-200 text-3xl">
+            <li class="cursor-pointer hover:border-b-2"> <a href="main">Home</a></li>
+            <li class="cursor-pointer hover:border-b-2">About</li>
+            <li class="cursor-pointer hover:border-b-2">Contact us</li>
+        </ul>
+    </nav> 
+    <div class="rounded-md drop-shadow-sm backdrop-blur-md bg-[#ddf1d190] flex mx-52 my-40">
+        <div class="rounded-l-md bg-[url({% static 'img4.jpg' %})] bg-no-repeat bg-cover ">
+            <h1 style="font-family: 'Dancing Script', cursive;" class="text-4xl mx-40 mt-80 px-3 py-2 bg-[#22271f90] rounded-md text-purple-200">Welcome to WonderLand</h1>
+        </div>
+        <form style="font-family: 'Dancing Script', cursive;" class="flex flex-col mx-6 my-8 px-11 py-4 w-96" method="POST">
+            {% csrf_token %}
+            <h1 class="place-content-center items-center h-12 flex text-3xl">SignUp</h1>
+            <input class="bg-[#0b0f24c1] my-2 px-2 border-b-2 border-cyan-100 rounded-md h-12" type="text" required
+                name="Username" placeholder="Username">
+            <!-- <input class="bg-[#0b0f24c1] my-2 px-2 border-b-2 border-cyan-100 rounded-md h-12" name="Gender" required list="Gender" placeholder="Gender"> -->
+            <datalist id="Gender">
+                {% for op in opts %}
+                <option value={{op.name}}>
+                    {% endfor %}
+            </datalist>
+            <!-- <input class="bg-[#0b0f24c1] my-2 px-2 border-b-2 border-cyan-100 rounded-md h-12" type="text" required name="Age" placeholder="Age"> -->
+            <input class="bg-[#0b0f24c1] my-2 px-2 border-b-2 border-cyan-100 rounded-md h-12" type="password" required
+                name="Password" placeholder="Password">
+            <!-- <input class="bg-[#0b0f24c1] my-2 px-2 border-b-2 border-cyan-100 rounded-md h-12" type="password" required name="ConfirmPassword" placeholder="Confirm Password"> -->
+
+            {% if messages %}
+            {% for message in messages %}
+            <p>*{{message}}</p>
+            {% endfor %}
+            {% endif %}
+
+            <button class="h-12 border-b-2 mx-24 ease-in-out duration-300 hover:mx-7 hover:border-purple-400 hover:bg-gradient-to-t hover:from-purple-300 text-lg" type="submit">SignUp</button>
+            <P class="place-content-center items-center h-12 flex">- or -</P>
+            <button class="h-12 border-b-2 mx-24 ease-in-out duration-300 hover:mx-7 hover:border-purple-400 hover:bg-gradient-to-t hover:from-purple-300 text-lg" type="button"><a href="https://www.w3schools.com">Log in</a></button>
+
+        </form>
+    </div>
+    <script src="{% static 'script.js' %}"></script>
+</body>
+
+</html>

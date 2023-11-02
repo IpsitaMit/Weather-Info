@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_home</title>
+    <link href="{% static 'index_style.css' %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[url({% static 'img3.jpg' %})] bg-cover">
+    <nav style="z-index: 5;" class="bg-[#2107173f] backdrop-blur-sm sticky top-0 px-4 flex items-center justify-between">
+        <div class="flex px-4 py-3 h-20">
+            <img class="rounded-full border-2 border-red-400" src="{% static 'img2.png' %}" alt="logo">
+            <h1 class="flex space-x-24 px-2 py-3 text-purple-200 text-3xl">Weather Info</h1>
+        </div>
+        <ul class="flex space-x-10 px-2 pt-5 text-purple-200 text-2xl">
+
+            <li class="cursor-pointer hover:border-b-2 px-4 py-3 rounded-sm bg-slate-500"><a href="admin_home">Home</a></li>
+            <li class="cursor-pointer hover:border-b-2 px-4 py-3 rounded-sm hover:bg-slate-500">About</li>
+            <li class="cursor-pointer hover:border-b-2 px-4 py-3 rounded-sm hover:bg-slate-500">Contact us</li>
+            <li class="cursor-pointer hover:border-b-2 px-4 py-3 rounded-sm hover:bg-slate-500">Profile</li>
+        </ul>
+    </nav>
+
+    <div class="cursor-pointer rounded-md drop-shadow-sm backdrop-blur-md bg-[#ddf1d190] flex mx-32 my-40 items-center hover:border-b-4">
+        <img class="h-48 rounded-md" src="{% static 'user_fun.jpg' %}" alt="image">
+        <div class="flex flex-col mx-6 my-4 px-11 py-4">
+            <h1 style="font-family: 'Dancing Script', cursive;" class="flex space-x-24 px-2 py-3 text-purple-200 text-3xl">Users</h1>
+            <h5 style="font-family: 'Dancing Script', cursive;" >View a list of all the registered users and their subscriptions.<br>Manage the list of users if neeed be.
+            </h5>
+        </div>
+    </div>
+
+    <div class="cursor-pointer rounded-md drop-shadow-sm backdrop-blur-md bg-[#ddf1d190] flex mx-32 my-40 items-center hover:border-b-4">
+        <img class="h-48 rounded-md" src="{% static 'weather station fun.jpeg' %}" alt="image">
+        <div class="flex flex-col mx-6 my-4 px-11 py-4">
+            <h1 style="font-family: 'Dancing Script', cursive;" class="flex space-x-24 px-2 py-3 text-purple-200 text-3xl">Weather Stations</h1>
+            <h5 style="font-family: 'Dancing Script', cursive;" >View a list of all the Weather Stationns and their locations.<br>Make changes if neeed be.
+            </h5>
+        </div>
+    </div>
+
+    <div class="cursor-pointer rounded-md drop-shadow-sm backdrop-blur-md bg-[#ddf1d190] flex mx-32 my-40 items-center hover:border-b-4">
+        <img class="h-48 rounded-md" src="{% static 'instruments fun.jpg' %}" alt="image">
+        <div class="flex flex-col mx-6 my-4 px-11 py-4">
+            <h1 style="font-family: 'Dancing Script', cursive;" class="flex space-x-24 px-2 py-3 text-purple-200 text-3xl">Instruments</h1>
+            <h5 style="font-family: 'Dancing Script', cursive;" >View a list of all the Instruments and their Status.<br>Make changes if neeed be.
+            </h5>
+        </div>
+    </div>
+
+    <div class="cursor-pointer rounded-md drop-shadow-sm backdrop-blur-md bg-[#ddf1d190] flex mx-32 my-40 items-center hover:border-b-4">
+        <img class="h-48 rounded-md" src="{% static 'engeneer fun.jpg' %}" alt="image">
+        <div class="flex flex-col mx-6 my-4 px-11 py-4">
+            <h1 style="font-family: 'Dancing Script', cursive;" class="flex space-x-24 px-2 py-3 text-purple-200 text-3xl">Engeneers</h1>
+            <h5 style="font-family: 'Dancing Script', cursive;" >View a list of all the Engeneers and their Specializations.<br>Make changes if neeed be.
+            </h5>
+        </div>
+    </div>
+</body>
+</html>

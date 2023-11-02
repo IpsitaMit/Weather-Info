@@ -1,0 +1,235 @@
+
+*{
+    margin:0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    /* font-family: 'Times New Roman', Times, serif;  */
+  }
+
+
+  /* header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100px;
+    padding:20px 100px;
+    background:transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+} */
+
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("pexels-johannes-plenio-1118873.jpg") no-repeat;
+    background-size: cover;
+    background-position: center ;
+} */
+
+/* .logo{
+    font-size: 40px;
+    color:white;
+} */
+
+/* .navigation a{
+    font-size: 25px;
+    font-weight: 25%;
+    color:white;
+    text-decoration: none;
+    position: relative;
+    margin-left: 40px;
+    
+} */
+
+.btnlogin{
+    width:100px;
+    height:40px;
+    text-align: center;
+    font-size: 20px;
+    background: transparent;
+    margin-left: 5px;
+    border:2px solid white;
+    border-radius: 10px;
+    cursor:pointer;
+    font-weight: 400;
+    transition: 0.5s;
+    color:white;
+    margin-left: 10px;
+}
+
+.btnlogin:hover{
+    background-color: white;
+    transition: 0.5s;
+    color:black;
+}
+
+.text-box{
+    position: absolute;
+}
+
+
+/* loginPage & RegistrationPage*/
+
+.wrapper{
+    position: relative;
+    width:400px;
+    height:470px;
+    margin-left: 550px;
+    background: transparent;
+    border:2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform:scale(0);/*to hide*/
+    transition: transform .3s ease ,height 0.2s ease;
+}
+
+.wrapper.active-popup{
+    transform: scale(1);
+}
+
+.wrapper.active{
+    height:520px;
+}
+
+/* important part for the transition */
+.wrapper .form-box.login{
+    transition:transform .18s ease;
+    transform: translateX(0);
+}
+.wrapper.active .form-box.login{
+    transition:none;
+    transform:translateX(-400px);
+}
+
+
+.wrapper .form-box.register{
+    position:absolute;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register{
+    transition:transform 0.18s ease;
+    transform:translateX(0);
+}
+
+/* end of transition */
+
+.wrapper .form-box {
+    width:100%;
+    padding:40px;
+}
+
+.form-box h2{
+    font-size: 35px;
+    text-align: center;
+    color:white
+}
+
+.form-box lable,i{
+    color:white
+}
+
+.input-box{
+    position: relative;
+    width:100%;
+    height:50px;
+    border-bottom: 2px solid #162938;
+    margin:40px 0;
+}
+
+.input-box input{
+    width:100%;
+    height:100%;
+    background: transparent;
+    border: none;
+    outline:none;
+    font-size: 15px;
+    color:white
+}
+
+
+.input-box i{
+    position:absolute;
+    right:8px;
+}
+
+
+.remember-forgot{
+    font-size: 15px;
+    color:white;
+    font-weight: 800;
+    margin:-15px 0 15px;
+    display: flex; 
+    justify-content: space-between; 
+} 
+
+.remember-forgot lable input{
+    accent-color:white;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    text-decoration: none;
+    color:white;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width:100%;
+      height:40px;
+      background-color:#162938;
+      font-size: 20px;
+      color:white;
+      border:none;
+      outline:none;
+      border-radius: 10px;
+}
+
+.login-register{
+    font-size: 15px;
+    margin:20px;
+    text-align: center;
+   
+}
+
+.login-register p,a{
+    color:white;
+}
+
+.login-register a{
+    text-decoration: none;
+   
+}
+
+.login-register a:hover{
+    text-decoration: underline;
+}
+
+/* .wrapper .icon-close{
+    position:absolute;
+    top:0;
+    right:0;
+    width:40px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #162938;
+    color:white;
+    border-bottom-left-radius: 15px;
+} */
+

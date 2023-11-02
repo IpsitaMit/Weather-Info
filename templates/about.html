@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{% static 'ind_style.css' %}">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[url({% static 'img3.jpg' %})] bg-cover">
+    <nav style="z-index: 5;" class="bg-[#2107173f] backdrop-blur-sm sticky top-0 px-4 flex items-center justify-between">
+        <div class="flex px-4 py-3 h-20">
+            <img class="rounded-full border-2 border-red-400" src="{% static 'img2.png' %}" alt="logo">
+            <h1 class="flex space-x-24 px-2 py-3 text-purple-200 text-3xl">Weather Info</h1>
+        </div>
+        <ul class="flex space-x-10 px-2 pt-5 text-purple-200 text-2xl">
+            <li class="cursor-pointer hover:border-b-2 px-4 py-3 rounded-sm hover:bg-slate-500"><a href="http://127.0.0.1:8000">Home</a></li>
+            <li class="cursor-pointer hover:border-b-2 px-4 py-3 rounded-sm bg-slate-500"><a href="about">About</a></li>
+            <li class="cursor-pointer hover:border-b-2 px-4 py-3 rounded-sm hover:bg-slate-500">Contact us</li>
+            <button class="btnlogin">Login</button>
+        </ul>
+    </nav>
+
+    <div class="grid justify-items-stretch mx-32 my-32 text-box">
+        <img class="h-48 w-48 justify-self-center shadow-md" src="{% static 'img2.png' %}" alt="logo">
+        <h1 class="justify-self-center my-3 text-fuchsia-200 text-6xl">Weather Info</h1>
+        <p class="justify-self-center my-5 text-fuchsia-200 text-lg text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas accusamus itaque amet in rem, facilis assumenda reprehenderit deserunt laudantium soluta vel sequi alias, officiis laboriosam quaerat porro labore fugiat molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste officiis facere exercitationem alias impedit, temporibus, cupiditate quis, tempora in ullam vel saepe perferendis corporis placeat minima asperiores facilis vitae a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni maxime velit nemo ad error modi obcaecati similique atque, ipsa accusantium, in, eveniet ab laudantium mollitia sit sed praesentium. Sed, quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab hic quod dolorum qui. Dolores, harum perspiciatis. Ab eaque neque mollitia possimus illo, fugiat omnis? Unde rerum necessitatibus reprehenderit commodi maxime?</p>
+        <h1 class="justify-self-center my-3 text-fuchsia-200 text-4xl text-center">Meet our Members</h1>
+        
+        <h1 class="justify-self-center my-3 text-fuchsia-200 text-3xl text-center">Head of Engenees<br><br>Bhaskar Chatterjee</h1>
+        <img class="rounded-full h-60 w-60 justify-self-center shadow-md" src="{% static 'img2.png' %}" alt="logo">
+        <p class="justify-self-center my-5 mx-96 text-fuchsia-200 text-lg text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, non recusandae. Atque iusto quisquam eligendi. Totam doloribus quo quae vitae. Ea voluptate molestiae quam ratione aut ab aspernatur ad illo.</p>
+        <hr>
+
+        <h1 class="justify-self-center my-3 text-fuchsia-200 text-3xl text-center">Head of Engenees<br><br>Bhaskar Chatterjee</h1>
+        <img class="rounded-full h-60 w-60 justify-self-center shadow-md" src="{% static 'img2.png' %}" alt="logo">
+        <p class="justify-self-center my-5 mx-96 text-fuchsia-200 text-lg text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, non recusandae. Atque iusto quisquam eligendi. Totam doloribus quo quae vitae. Ea voluptate molestiae quam ratione aut ab aspernatur ad illo.</p>
+        <hr>
+
+        <h1 class="justify-self-center my-3 text-fuchsia-200 text-3xl text-center">Head of Engenees<br><br>Bhaskar Chatterjee</h1>
+        <img class="rounded-full h-60 w-60 justify-self-center shadow-md" src="{% static 'img2.png' %}" alt="logo">
+        <p class="justify-self-center my-5 mx-96 text-fuchsia-200 text-lg text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, non recusandae. Atque iusto quisquam eligendi. Totam doloribus quo quae vitae. Ea voluptate molestiae quam ratione aut ab aspernatur ad illo.</p>
+        <hr>
+
+        <h1 class="justify-self-center my-3 text-fuchsia-200 text-3xl text-center">Head of Engenees<br><br>Bhaskar Chatterjee</h1>
+        <img class="rounded-full h-60 w-60 justify-self-center shadow-md" src="{% static 'img2.png' %}" alt="logo">
+        <p class="justify-self-center my-5 mx-96 text-fuchsia-200 text-lg text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, non recusandae. Atque iusto quisquam eligendi. Totam doloribus quo quae vitae. Ea voluptate molestiae quam ratione aut ab aspernatur ad illo.</p>
+        <hr>
+    </div>
+
+    <!-- login & registaration page -->
+    <!-- <div class="flex justify-center items-center truncate backdrop-blur-sm"> -->
+        <div class="wrapper ">
+
+        
+            <div class="w-11 h-10 flex p-2 top-2 right-0 cursor-pointer hover:drop-shadow-md absolute z-10 icon-close">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+    
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"></span>
+                        <lable>Email</lable>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email">
+    
+                    </div>
+    
+    
+                    <div class="input-box">
+                        <span class="icon"></span>
+                        <lable>password</lable>
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password">
+    
+                    </div>
+    
+                    <div class="remember-forgot">
+                        <lable>
+                            <input type="checkbox">
+                            Remember me
+                        </lable>
+                        <a href="#">Forgot password</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                    </div>
+    
+                </form>
+            </div>
+    
+    
+    
+    
+            <div class="form-box register">
+                <h2>Registration</h2>
+                <form action="#">
+    
+                    <div class="input-box">
+                        <span class="icon"></span>
+                        <lable>Username</lable>
+                        <i class="fa-solid fa-user"></i>
+                        <input type="email">
+    
+                    </div>
+    
+                    <div class="input-box">
+                        <span class="icon"></span>
+                        <lable>Email</lable>
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email">
+    
+                    </div>
+    
+    
+                    <div class="input-box">
+                        <span class="icon"></span>
+                        <lable>password</lable>
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password">
+    
+                    </div>
+    
+                    <div class="remember-forgot">
+                        <lable>
+                            <input type="checkbox">
+                            I agree to the terms and conditions
+                        </lable>
+    
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                    </div>
+    
+                </form>
+            </div>
+    
+    
+        </div>
+
+    
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+
+</html>
